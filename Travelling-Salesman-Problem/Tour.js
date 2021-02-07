@@ -2,10 +2,6 @@ class Tour {
     constructor () {
         this.cities = []
         this.distance = 0;
-
-        /*for (let i = 0; i < TourManager.getCityLength(); i++) {
-            this.cities.push(new City(0, 0));
-        }*/
     }
 
     getCities() {
@@ -13,7 +9,7 @@ class Tour {
     }
 
     generateIndividual() {
-        for (let i = 0; i < TourManager.getCityLength(); i++) {
+        for (let i = 0; i < TourManager.getCityNumber(); i++) {
             this.setCity(i, TourManager.getCity(i));
         }
 

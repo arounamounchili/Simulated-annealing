@@ -2,7 +2,6 @@ class TourManager {
    
     static cityMap = [];
     
-
     static addCity (city) {
         this.cityMap.push(city)
     }
@@ -11,7 +10,7 @@ class TourManager {
         return this.cityMap[index];
     }
 
-    static getCityLength () {
+    static getCityNumber () {
         return this.cityMap.length;
     }
 }
