@@ -3,7 +3,7 @@ class City {
         if (x === undefined || y === undefined) {
             // Return random integer from min to max
             const min = 100;
-            const max = 700;
+            const max = 600;
             this.x = this.getRandomInteger(min, max); 
             this.y = this.getRandomInteger(min, max);   
         }else {
