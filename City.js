@@ -1,33 +1,25 @@
 class City {
     constructor(x, y) {
-        if (!arguments.length) {
+        if (x === undefined || y === undefined) {
             // Return random integer from min to max
             const min = 100;
             const max = 700;
-            this._x = this.getRandomInteger(min, max); 
-            this._y = this.getRandomInteger(min, max);   
+            this.x = this.getRandomInteger(min, max); 
+            this.y = this.getRandomInteger(min, max);   
         }else {
-            this._x = x;
-            this._y = y;
+            this.x = x;
+            this.y = y;
         } 
-    }
-
-    get x () {
-        return this._x;
-    }
-
-    get y () {
-        return this._y;
     }
 
     getRandomInteger(min, max){
         return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
 
-    distanceTo (anotherCity) {
+    distanceTo (city) {
         const distance = Math.sqrt(
-            Math.abs(this.x - anotherCity.x)**2 + 
-            Math.abs(this.y - anotherCity.y)**2
+            Math.abs(this.x - city.x)**2 + 
+            Math.abs(this.y - city.y)**2
         );
         return distance;
     }
